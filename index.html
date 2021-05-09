@@ -54,7 +54,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2021-05-06 17:16:31'
+  postUpdate: '2021-05-09 11:30:26'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -144,25 +144,26 @@
 进程与程序的对应关系：通过多次执行，一个程序可对应多个进程；通过调用关系，一个进程可包括多个程序。
 
 原语
-由若干条指令所组成的指令序列，来实现某个特定的操 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/05/03/OperatingSystem/OS-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" title="「OS」内存管理">     <img class="post_bg" src="https://img.imgdb.cn/item/608787d0d1a9ae528f47fb66.jpg" onerror="this.onerror=null;this.src='/img/404_2.jpg'" alt="「OS」内存管理"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/05/03/OperatingSystem/OS-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" title="「OS」内存管理">「OS」内存管理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-05-03T10:07:00.000Z" title="发表于 2021-05-03 18:07:00">2021-05-03</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/OperatingSystem/">OperatingSystem</a></span></div><div class="content">编译时函数定义在不同文件，无法知道地址。在链接时，链接器会扫描各个目标文件，将之前未填写的地址填写上（重定位）
-存储管理基本需求
-地址独立：每个程序具有的物理地址空间应该是相互独立的
-地址保护：一个程序不能访问另一个程序的地址空间基本概念
+由若干条指令所组成的指令序列，来实现某个特定的操 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/05/03/OperatingSystem/OS-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" title="「OS」内存管理">     <img class="post_bg" src="https://img.imgdb.cn/item/608787d0d1a9ae528f47fb66.jpg" onerror="this.onerror=null;this.src='/img/404_2.jpg'" alt="「OS」内存管理"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/05/03/OperatingSystem/OS-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" title="「OS」内存管理">「OS」内存管理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-05-03T10:07:00.000Z" title="发表于 2021-05-03 18:07:00">2021-05-03</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/OperatingSystem/">OperatingSystem</a></span></div><div class="content">基本概念地址空间：一个进程能够用于访问内存的地址集合
+程序：是静止的，存放在磁盘上的可执行文件，是进程的实体。
+进程：是动态的，包括进程控制块 PCB，程序和程序处理对象（数据集），是一个程序的执行过程，是资源分配的基本单位。通常把进程分为系统进程和用户进程。
+作业：用户需要计算机完成的某项任务，是要求计算机所做工作的集合。通常包括程序、数据、操作说明书。
+系统碎片：内存中无法被利用的存储空间称为碎片
+内部碎片：分配给作业的存储空间中未被利用的部分
+外部碎片：系统中无法利用的小的空闲分区，如分区与分区之间存在的碎片。这是造成内存系统性能下降的主要原因，它可以通过紧凑技术等被整理后清除。
+紧凑技术：通过移动作业，把多个分散的小分区拼接成一个大分区。
 
-地址空间：一个进程能够用于访问内存的地址集合程序：是静止的，存放在磁盘上的可执行文件，是进程的实体。进程：是动态的，包括进程控制块 PCB，程序和程序处理对象（数据集），是一个程序的执行过程，是资源分配的基本单位。通常把进程分为系统进程和用户进程。作业：用户需要计算机完成的某项任务，是要求计算机所做工作的集合。通常包括程序、数据、操作说明书。
+时机：找不到足够大的空闲分区，但总空闲分区容量满足要求。
+实现支撑：动态重定位
+
 存储管理的功能
 存储分配和回收
 地址变换  可执行文件生成中的链接技术、程序加载时的重定位技术、进程运行时硬件和软件的地址变换技术
 存储共享和保护
-存储器扩充分区式内存管理分区式分配
-把内存分为大小相等或不等的分区，每个应用程序占用一个或几个分区。
+存储器扩充
 
-固定式分区
-系统初始化时，内存划分为若干固定大小（不一定相等）的连续分区。程序适应分区。
-
-
-易于实现
-但内碎片会造成浪费，并且分区总数固定，限制了并发执行的程 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/04/26/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/%E3%80%8CAlgorithmic%20questions%E3%80%8D%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" title="「Algorithmic questions」动态规划">     <img class="post_bg" src="https://img.imgdb.cn/item/60878a41d1a9ae528f5c1a03.jpg" onerror="this.onerror=null;this.src='/img/404_2.jpg'" alt="「Algorithmic questions」动态规划"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/26/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/%E3%80%8CAlgorithmic%20questions%E3%80%8D%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" title="「Algorithmic questions」动态规划">「Algorithmic questions」动态规划</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-04-26T04:22:16.000Z" title="发表于 2021-04-26 12:22:16">2021-04-26</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Algorithm-problems/">Algorithm problems</a></span></div><div class="content">开个坑。感觉算法题还是要经常练保持手感，前段时间蓝桥杯，感觉大一时洛谷那么多题白刷了，那么多算法模板白总结了，都忘完了。做算法题还是要尽量自己多想，不思考看题解忘得太快。虽然最近比较忙，但每两天做一点应该还是可以的（吧）。希望不咕。
+分区式内存管理分区式分配把内存分为大小相等或不等的分区，每个应用程序占用一个或几个分区。
+固定式分 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/04/26/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/%E3%80%8CAlgorithmic%20questions%E3%80%8D%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" title="「Algorithmic questions」动态规划">     <img class="post_bg" src="https://img.imgdb.cn/item/60878a41d1a9ae528f5c1a03.jpg" onerror="this.onerror=null;this.src='/img/404_2.jpg'" alt="「Algorithmic questions」动态规划"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/26/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98/%E3%80%8CAlgorithmic%20questions%E3%80%8D%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" title="「Algorithmic questions」动态规划">「Algorithmic questions」动态规划</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-04-26T04:22:16.000Z" title="发表于 2021-04-26 12:22:16">2021-04-26</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Algorithm-problems/">Algorithm problems</a></span></div><div class="content">开个坑。感觉算法题还是要经常练保持手感，前段时间蓝桥杯，感觉大一时洛谷那么多题白刷了，那么多算法模板白总结了，都忘完了。做算法题还是要尽量自己多想，不思考看题解忘得太快。虽然最近比较忙，但每两天做一点应该还是可以的（吧）。希望不咕。
 一维T198. House Robber
 假如你是一个劫匪，并且决定抢劫一条街上的房子，每个房子内的钱财数量各不相同。如果 你抢了两栋相邻的房子，则会触发警报机关。求在不触发机关的情况下最多可以抢劫多少钱。
 
